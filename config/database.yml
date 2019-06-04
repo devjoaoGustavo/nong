@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
+  host: localhost
   database: nong_production
-  username: nong
-  password: <%= ENV['NONG_DATABASE_PASSWORD'] %>
+  username: Rails.application.credentials[:username]
+  password: Rails.application.credentials[:password]

@@ -4,7 +4,6 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-ActiveSupport	test/test_helper.rb	/^class ActiveSupport::TestCase$/;"	c
 Application	config/application.rb	/^  class Application < Rails::Application$/;"	c	class:Nong
 ApplicationCable	app/channels/application_cable/channel.rb	/^module ApplicationCable$/;"	m
 ApplicationCable	app/channels/application_cable/connection.rb	/^module ApplicationCable$/;"	m
@@ -13,9 +12,59 @@ ApplicationHelper	app/helpers/application_helper.rb	/^module ApplicationHelper$/
 ApplicationJob	app/jobs/application_job.rb	/^class ApplicationJob < ActiveJob::Base$/;"	c
 ApplicationMailer	app/mailers/application_mailer.rb	/^class ApplicationMailer < ActionMailer::Base$/;"	c
 ApplicationRecord	app/models/application_record.rb	/^class ApplicationRecord < ActiveRecord::Base$/;"	c
-ApplicationSystemTestCase	test/application_system_test_case.rb	/^class ApplicationSystemTestCase < ActionDispatch::SystemTestCase$/;"	c
+Boundary	app/lib/boundary/ngo.rb	/^module Boundary$/;"	m
+Boundary	app/lib/boundary/ngo/head.rb	/^module Boundary$/;"	m
 Channel	app/channels/application_cable/channel.rb	/^  class Channel < ActionCable::Channel::Base$/;"	c	class:ApplicationCable
 Connection	app/channels/application_cable/connection.rb	/^  class Connection < ActionCable::Connection::Base$/;"	c	class:ApplicationCable
+CreateNgos	db/migrate/20190601185534_create_ngos.rb	/^class CreateNgos < ActiveRecord::Migration[5.2]$/;"	c
+EnableExtensionForUuid	db/migrate/20190531011234_enable_extension_for_uuid.rb	/^class EnableExtensionForUuid < ActiveRecord::Migration[5.2]$/;"	c
+Head	app/lib/boundary/ngo/head.rb	/^    class Head < Dry::Struct$/;"	c	class:Boundary.Ngo
+HomeController	app/controllers/home_controller.rb	/^class HomeController < ApplicationController$/;"	c
+ListingNgo	app/lib/use_cases/listing_ngo.rb	/^  class ListingNgo$/;"	c	class:UseCases
+Ngo	app/lib/boundary/ngo.rb	/^  class Ngo < Dry::Struct$/;"	c	class:Boundary
+Ngo	app/lib/boundary/ngo/head.rb	/^  class Ngo$/;"	c	class:Boundary
+Ngo	app/models/ngo.rb	/^class Ngo < ApplicationRecord$/;"	c
+NgoCreation	app/lib/use_cases/ngo_creation.rb	/^  class NgoCreation$/;"	c	class:UseCases
+NgoLookup	app/lib/use_cases/ngo_lookup.rb	/^  class NgoLookup$/;"	c	class:UseCases
+NgoParser	app/lib/parsing/ngo_parser.rb	/^  class NgoParser$/;"	c	class:Parsing
+NgoPresenter	app/lib/presentation/ngo_presenter.rb	/^  class NgoPresenter$/;"	c	class:Presentation
+NgosController	app/controllers/ngos_controller.rb	/^class NgosController < ApplicationController$/;"	c
 Nong	config/application.rb	/^module Nong$/;"	m
+Parsing	app/lib/parsing/ngo_parser.rb	/^module Parsing$/;"	m
+Presentation	app/lib/presentation/ngo_presenter.rb	/^module Presentation$/;"	m
+Types	config/initializers/types.rb	/^module Types$/;"	m
+UseCases	app/lib/use_cases/listing_ngo.rb	/^module UseCases$/;"	m
+UseCases	app/lib/use_cases/ngo_creation.rb	/^module UseCases$/;"	m
+UseCases	app/lib/use_cases/ngo_lookup.rb	/^module UseCases$/;"	m
+assign_boundary_ngo	app/lib/use_cases/ngo_creation.rb	/^    def assign_boundary_ngo(presenter)$/;"	f	class:UseCases.NgoCreation
+branches	app/models/ngo.rb	/^  def branches$/;"	f	class:Ngo
+build_boundary_ngo	app/lib/presentation/ngo_presenter.rb	/^    def build_boundary_ngo$/;"	f	class:Presentation.NgoPresenter
+call	app/lib/parsing/ngo_parser.rb	/^    def call$/;"	f	class:Parsing.NgoParser
+call	app/lib/presentation/ngo_presenter.rb	/^    def call$/;"	f	class:Presentation.NgoPresenter
+call	app/lib/use_cases/listing_ngo.rb	/^    def call$/;"	f	class:UseCases.ListingNgo
+call	app/lib/use_cases/ngo_creation.rb	/^    def call$/;"	f	class:UseCases.NgoCreation
+call	app/lib/use_cases/ngo_lookup.rb	/^    def call$/;"	f	class:UseCases.NgoLookup
+change	db/migrate/20190531011234_enable_extension_for_uuid.rb	/^  def change$/;"	f	class:EnableExtensionForUuid
+change	db/migrate/20190601185534_create_ngos.rb	/^  def change$/;"	f	class:CreateNgos
+create	app/controllers/ngos_controller.rb	/^  def create$/;"	f	class:NgosController
+create_ngo_params	app/controllers/ngos_controller.rb	/^  def create_ngo_params$/;"	f	class:NgosController
+index	app/controllers/ngos_controller.rb	/^  def index$/;"	f	class:NgosController
+initialize	app/lib/parsing/ngo_parser.rb	/^    def initialize(args)$/;"	f	class:Parsing.NgoParser
+initialize	app/lib/presentation/ngo_presenter.rb	/^    def initialize(domain_ngo)$/;"	f	class:Presentation.NgoPresenter
+initialize	app/lib/use_cases/listing_ngo.rb	/^    def initialize(presenter_class = Presentation::NgoPresenter)$/;"	f	class:UseCases.ListingNgo
+initialize	app/lib/use_cases/ngo_creation.rb	/^    def initialize(args = {})$/;"	f	class:UseCases.NgoCreation
+initialize	app/lib/use_cases/ngo_lookup.rb	/^    def initialize(args = {})$/;"	f	class:UseCases.NgoLookup
+invalid_input	app/lib/use_cases/ngo_creation.rb	/^    def invalid_input$/;"	f	class:UseCases.NgoCreation
+new	app/controllers/ngos_controller.rb	/^  def new$/;"	f	class:NgosController
+new_boundary_ngo	app/controllers/ngos_controller.rb	/^  def new_boundary_ngo$/;"	f	class:NgosController
+ngo_id	app/lib/presentation/ngo_presenter.rb	/^    def ngo_id$/;"	f	class:Presentation.NgoPresenter
+normalize_args	app/lib/use_cases/ngo_creation.rb	/^    def normalize_args(args)$/;"	f	class:UseCases.NgoCreation
+parent	app/models/ngo.rb	/^  def parent$/;"	f	class:Ngo
+parent?	app/lib/boundary/ngo.rb	/^    def parent?$/;"	f	class:Boundary.Ngo
+parent_ngos	app/controllers/ngos_controller.rb	/^  def parent_ngos$/;"	f	class:NgosController
+present	app/lib/use_cases/listing_ngo.rb	/^    def present(domain_ngo)$/;"	f	class:UseCases.ListingNgo
+present	app/lib/use_cases/ngo_lookup.rb	/^    def present(domain_ngo)$/;"	f	class:UseCases.NgoLookup
+show	app/controllers/ngos_controller.rb	/^  def show$/;"	f	class:NgosController
 system!	bin/setup	/^def system!(*args)$/;"	f
 system!	bin/update	/^def system!(*args)$/;"	f
+welcome	app/controllers/home_controller.rb	/^  def welcome$/;"	f	class:HomeController

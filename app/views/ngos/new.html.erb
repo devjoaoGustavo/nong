@@ -1,0 +1,30 @@
+<h1>Cadastro da Obra Social</h1>
+
+<%= form_with url: ngos_path do |f| %>
+  <div class="form-group">
+    <label for="name">Nome</label>
+    <%= f.text_field :name, class: 'form-control', placeholder: 'Nome da Obra Social' %>
+  </div>
+  <div class="form-group">
+    <label for="description">Perfil</label>
+    <%= f.text_area :description, class: 'form-control', placeholder: 'Descreva de forma breve o trabalho da Instituição' %>
+  </div>
+  <div class="form-group">
+    <label for="image_url">Logo</label>
+    <%= f.text_field :image_url, class: 'form-control', placeholder: 'Coloque a url para o Logotipo da Instituição' %>
+  </div>
+  <% if @ngos.present? %>
+    <div class="form-group form-check">
+      <%= f.check_box :branch, class: 'form-check-input', placeholder: 'Coloque a url para o Logotipo da Instituição' %>
+      <label for="image_url" class="form-check-label">É uma filial?</label>
+      <small class="form-text text-muted">
+        Marque esta opção caso queira escolher uma sede para este serviço
+      </small>
+    </div>
+    <div class="form-group">
+      <label for="ngo_id"></label>
+      <%= f.select :ngo_id, @ngos.collect { |ngo| [ngo.name, ngo.id] }, include_blank: 'Selecione a obra matriz', class: 'form-control' %>
+    </div>
+  <% end %>
+  <%= f.submit 'Salvar', class: 'btn btn-primary' %>
+<% end %>
